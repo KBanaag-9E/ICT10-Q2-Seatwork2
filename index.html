@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+    <head>
+        <!-- Recommended meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!-- PyScript CSS -->
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+        <!-- This script tag bootstraps PyScript -->
+        <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+        <!-- Bootstrap Setup -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <title></title>
+
+        <style>
+            .container {
+                border: dashed black 5px;
+                background-color: antiquewhite;
+                color: darkgoldenrod;
+                font-family: Gill Sans;
+                font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <py-script src="main.py"></py-script>
+
+        <div class="container mt-3">
+            
+        <h1 class="mt-2">Student Grade Calculator</h1>
+        <h4 class="mb-4">Please input all your final individual subject grade percent scores to get your final weighted average score.</h4>
+
+            <form id="grade_calculator">
+
+                <!-- full name -->
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName">
+                </div>
+
+                <!-- science (subject 1) -->
+                <div class="mb-3">
+                    <label for="s1" class="form-label">Science</label>
+                    <input type="text" class="form-control" id="s1">
+                </div>
+                <!-- english (subject 2) -->
+                <div class="mb-3">
+                    <label for="s2" class="form-label">English</label>
+                    <input type="text" class="form-control" id="s2">
+                </div>
+                <!-- filipino (subject 3) -->
+                <div class="mb-3">
+                    <label for="s3" class="form-label">Filipino</label>
+                    <input type="text" class="form-control" id="s3">
+                </div>
+                <!-- math (subject 4) -->
+                <div class="mb-3">
+                    <label for="s4" class="form-label">Mathematics</label>
+                    <input type="text" class="form-control" id="s4">
+                </div>
+                <!-- ss/philosophy (subject 5) -->
+                <div class="mb-3">
+                    <label for="s5" class="form-label">Philisophy</label>
+                    <input type="text" class="form-control" id="s5">
+                </div>
+                <!-- TLE (subject 6) -->
+                <div class="mb-3">
+                    <label for="s6" class="form-label">TLE</label>
+                    <input type="text" class="form-control" id="s6">
+                </div>
+
+                <input type="button" class="mb-4 btn btn-primary" py-click="grade_calculator" value="Calculate">
+            </form>
+        </div>
+
+        <div id="output" class="container mt-3 mb-3">
+            <h4>(your final grade will be shown here)</h4>
+        </div>
+
+    </body>
+</html>
