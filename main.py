@@ -32,12 +32,13 @@ def grade_calculator(e):
     # average weighted score
     final = int(((subjects[0] * units[0]) + (subjects[1] * units[0]) + (subjects[2] * units[1]) + (subjects[3] * units[0]) + (subjects[4] * units[1]) + (subjects[5] * units[2])) / (units[0] + units[0] + units[1] + units[0] + units[1] + units[2]))
 
-    if final > 75:
+    if final > 74:
         display(f'Weighted Average: {final}', target='output')
         display(f'You passed.', target='output')
     else:
         display(f'Weighted Average: {final}', target='output')
         display(f'You failed.', target='output')
+
 
 
 
