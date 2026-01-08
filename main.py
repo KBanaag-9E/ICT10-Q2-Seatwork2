@@ -11,12 +11,12 @@ def grade_calculator(e):
     display(f'Student Name: {name}', target='output')
 
     # all subject variables
-    sci = int(document.getElementById('s1').value)
-    eng = int(document.getElementById('s2').value)
-    fil = int(document.getElementById('s3').value)
-    math = int(document.getElementById('s4').value)
-    ss = int(document.getElementById('s5').value)
-    tle = int(document.getElementById('s6').value)
+    sci = document.getElementById('s1').value
+    eng = document.getElementById('s2').value
+    fil = document.getElementById('s3').value
+    math = document.getElementById('s4').value
+    ss = document.getElementById('s5').value
+    tle = document.getElementById('s6').value
 
     # displays subject scores
     display(f'Science: {sci}', target='output')
@@ -38,6 +38,7 @@ def grade_calculator(e):
     else:
         display(f'Weighted Average: {final}', target='output')
         display(f'You failed.', target='output')
+
 
 
 
