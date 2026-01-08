@@ -46,4 +46,9 @@ def grade_calculator(e):
         float(subjects[5]) * units[2]) / 
         (units[0] + units[0] + units[1] + units[0] + units[1] + units[2]), 2)
 
-    display(f'Weighted Average: {final}', target='output')
+    if final > 70:
+        display(f'Weighted Average: {final}', target='output')
+        display(f'You passed.', target='output')
+    else:
+        display(f'Weighted Average: {final}', target='output')
+        display(f'You failed.', target='output')
