@@ -11,12 +11,12 @@ def grade_calculator(e):
     display(f'Student Name: {name}', target='output')
 
     # all subject variables
-    sci = document.getElementById('s1').value
-    eng = document.getElementById('s2').value
-    fil = document.getElementById('s3').value
-    math = document.getElementById('s4').value
-    ss = document.getElementById('s5').value
-    tle = document.getElementById('s6').value
+    sci = int(document.getElementById('s1').value)
+    eng = int(document.getElementById('s2').value)
+    fil = int(document.getElementById('s3').value)
+    math = int(document.getElementById('s4').value)
+    ss = int(document.getElementById('s5').value)
+    tle = int(document.getElementById('s6').value)
 
     # displays subject scores
     display(f'Science: {sci}', target='output')
@@ -26,25 +26,13 @@ def grade_calculator(e):
     display(f'Philosophy: {ss}', target='output')
     display(f'TLE: {tle}', target='output')
 
-    # assigns the default value of the subject input as 0 if no input is detected
-    sci = int(("") or 0)
-    eng = int(("") or 0)
-    fil = int(("") or 0)
-    math = int(("") or 0)
-    ss = int(("") or 0)
-    tle = int(("") or 0)
-
     subjects = [sci, eng, fil, math, ss, tle] # all subjecrs
     units = (5, 3, 2) # number of hours per subject
 
     # average weighted score
-    final = round((float(subjects[0]) * units[0] +
-        float(subjects[1]) * units[0] +
-        float(subjects[2]) * units[1] +
-        float(subjects[3]) * units[0] +
-        float(subjects[4]) * units[1] +
-        float(subjects[5]) * units[2]) / 
-        (units[0] + units[0] + units[1] + units[0] + units[1] + units[2]), 2)
+    final = int(((subjects[0] * units[0]) + (subjects[1] * units[0]) + (subjects[2] * units[1]) + (subjects[3] * units[0]) + (subjects[4] * units[1]) + (subjects[5] * units[2])) / (units[0] + units[0] + units[1] + units[0] + units[1] + units[2]))
+
+    display(f'Weighted Average: {final}', target='output')
 
     if final > 70:
         display(f'Weighted Average: {final}', target='output')
@@ -52,3 +40,4 @@ def grade_calculator(e):
     else:
         display(f'Weighted Average: {final}', target='output')
         display(f'You failed.', target='output')
+
